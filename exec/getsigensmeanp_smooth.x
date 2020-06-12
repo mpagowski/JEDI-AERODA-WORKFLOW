@@ -1,0 +1,1 @@
+../sorc/gsi.fd/exec/getsigensmeanp_smooth.x

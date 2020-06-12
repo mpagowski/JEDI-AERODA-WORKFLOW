@@ -1,0 +1,1 @@
+../sorc/gsi.fd/exec/nc_diag_cat_serial.x
