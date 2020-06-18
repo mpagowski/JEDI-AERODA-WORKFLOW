@@ -1,0 +1,13 @@
+all is based on workflow in 
+/scratch1/BMC/gsd-fv3-dev/MAPP_2018/bhuang/JEDI-2020/JEDI-FV3/expCodes/GSDChem_cycling/global-workflow
+
+all locations for scripts in readme.txt replaced with
+/scratch1/BMC/gsd-fv3-dev/MAPP_2018/pagowski/workflow
+
+getGFSIC - get control and ensmble files from HPSS and convert to
+tile files for initial condition at the very beginning 
+this is flexible script that will convert sigio or nemsio format to
+NetCDF tile format
+
+grabGFSAna - getting control and ensemble files from HPSS in NEMSIO format
+GFSNEMS2NC - convert nemsio files to netcdf format on Gaussian grid
