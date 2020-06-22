@@ -11,3 +11,6 @@ NetCDF tile format
 
 grabGFSAna - getting control and ensemble files from HPSS in NEMSIO format
 GFSNEMS2NC - convert nemsio files to netcdf format on Gaussian grid
+
+example of cycle in 
+$scr1/gsd-fv3-dev/Mariusz.Pagowski/FV3_CHEM

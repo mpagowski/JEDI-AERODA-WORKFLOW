@@ -14,9 +14,9 @@
 	-->
 
 	<!-- Experiment parameters such as name, starting, ending dates -->
-	<!ENTITY PSLOT "jedi-3denvar-aeroDA-modis">
-	<!ENTITY SDATE "201606090000">
-	<!ENTITY EDATE "201606091800">
+	<!ENTITY PSLOT "jedi-3denvar-aeroDA--modis">
+	<!ENTITY SDATE "201605311800">
+	<!ENTITY EDATE "201606040000">
 
 	<!-- Run Envrionment -->
 	<!ENTITY RUN_ENVIR "emc">
@@ -24,19 +24,22 @@
 	<!ENTITY HPSS_PROJECT "fim">
 
 	<!-- Experiment top run directory-->
-	<!ENTITY TOPRUNDIR "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/pagowski/expruns"> 
-	<!ENTITY TOPICDIR "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/pagowski/expruns/datasets">
-	<!ENTITY TOPOBSDIR  "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/pagowski/expruns/datasets/OBS/NNR_AOD/">
+	<!ENTITY TOPRUNDIR "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/bhuang/JEDI-2020/JEDI-FV3/expRuns"> 
+	<!ENTITY TOPICDIR "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/bhuang/JEDI-2020/JEDI-FV3/dataSets">
+	<!--ENTITY TOPOBSDIR "/scratch1/BMC/wrf-chem/pagowski/MAPP_2018/OBS/VIIRS/AOT/thinned_"-->
+	<!ENTITY TOPOBSDIR  "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/bhuang/JEDI-2020/JEDI-FV3/dataSets/NNR_AOD_Obs/2016Case/thinned_C192/">
 
 	<!-- Experiment and Rotation directory -->
 	<!ENTITY EXPDIR "&TOPRUNDIR;/&PSLOT;/dr-work/">
 	<!ENTITY ROTDIR "&TOPRUNDIR;/&PSLOT;/dr-data/">
-	<!ENTITY ICSDIR "&TOPICDIR;/ICs/">
-	<!ENTITY GBBDIR "&TOPICDIR;/GBBEPx/">
+	<!ENTITY ICSDIR "&TOPICDIR;/ICs/L64/">
+	<!--ENTITY GBBDIR "&TOPICDIR;/GBBEPx/C96/"-->
+	<!ENTITY GBBDIR "&TOPICDIR;/GBBEPx/C96_Li_Copy20200407/">
 
 	<!-- Directories for driving the workflow -->
 	<!ENTITY HOMEjedi "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/bhuang/JEDI-2020/JEDI-FV3/expCodes/fv3-bundle/build">
-	<!ENTITY HOMEgfs  "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/pagowski/workflow/JEDI-AERODA-WORKFLOW">
+	<!--ENTITY HOMEjedi "/scratch1/NCEPDEV/da/Cory.R.Martin/JEDI/fv3-bundle/buildscripts/build-intel-19.0.5.281-release-default"-->
+	<!ENTITY HOMEgfs  "/scratch1/BMC/gsd-fv3-dev/MAPP_2018/bhuang/JEDI-2020/JEDI-FV3/expCodes/GSDChem_cycling/global-workflow-clean">
 	<!ENTITY JOBS_DIR "&HOMEgfs;/jobs/rocoto">
 	<!ENTITY DMPDIR   "/scratch1/NCEPDEV/global/glopara/dump">
 
@@ -771,6 +774,7 @@
 	<envar><name>cyc</name><value><cyclestr>@H</cyclestr></value></envar>
 	<dependency>
 		<and>
+			<taskdep task="gdashxaodanl"/>
 			<metataskdep metatask="gdashxaod"/>
 		</and>
 	</dependency>
